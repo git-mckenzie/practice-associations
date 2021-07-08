@@ -1,5 +1,5 @@
 class Speaker < ApplicationRecord
-  has_many :meetings, through :meeting_speaker
+  has_many :meetings, through: :meeting_speaker
 
   def create
     speaker = Speaker.new(

@@ -1,5 +1,5 @@
 class Meeting < ApplicationRecord
-  has_many :speakers, through :meeting_speaker
+  has_many :speakers, through: :meeting_speaker
 
   def create
     meeting = Meeting.new(
@@ -14,5 +14,4 @@ class Meeting < ApplicationRecord
       render json: { errors: meeting.errors.full_messages }, status: :bad_request
     end
   end
-
 end
